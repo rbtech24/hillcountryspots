@@ -12,7 +12,7 @@ RUN npm ci
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN vite build && esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js
 
 # Copy attached assets to dist folder
 RUN cp -r attached_assets dist/
@@ -24,4 +24,4 @@ RUN rm -rf node_modules && npm ci --only=production
 EXPOSE 5000
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["node", "dist/server.js"]
