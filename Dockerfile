@@ -14,8 +14,8 @@ COPY . .
 # Build the application
 RUN npm run build
 
-# Remove dev dependencies to reduce image size
-RUN npm prune --production
+# Clean install production dependencies only
+RUN rm -rf node_modules && npm ci --only=production
 
 # Expose port
 EXPOSE 5000
