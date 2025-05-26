@@ -3,8 +3,8 @@ services:
     name: hillcountryspots
     env: node
     plan: free
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    buildCommand: npm install && vite build && esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js
+    startCommand: NODE_ENV=production node dist/server.js
     envVars:
       - key: NODE_ENV
         value: production
