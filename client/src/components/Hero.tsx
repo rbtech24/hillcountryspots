@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Compass, Play, ChevronDown } from "lucide-react";
+import hillCountryImage from "@assets/hill country.jpg";
 
 export default function Hero() {
   return (
@@ -8,7 +9,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/attached_assets/hill country.jpg')"
+          backgroundImage: `url(${hillCountryImage})`
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
