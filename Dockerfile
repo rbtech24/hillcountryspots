@@ -14,6 +14,9 @@ COPY . .
 # Build the application
 RUN npm run build
 
+# Copy attached assets to dist folder
+RUN cp -r attached_assets dist/
+
 # Clean install production dependencies only
 RUN rm -rf node_modules && npm ci --only=production
 

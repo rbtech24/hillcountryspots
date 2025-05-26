@@ -40,6 +40,11 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // Health check endpoint for Render
+  app.get('/health', (_req, res) => {
+    res.status(200).json({ status: 'healthy', timestamp: new Date().toISOString() });
+  });
+
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
@@ -56,8 +61,8 @@ app.use((req, res, next) => {
     res.sendFile(path.resolve("dist/index.html"));
   });
 
-  // ALWAYS serve the app on port 5000
-  const port = 5000;
+  // Use Render's assigned port or fallback to 5000
+  const port = process.env.PORT || 5000;
   server.listen({
     port,
     host: "0.0.0.0",
