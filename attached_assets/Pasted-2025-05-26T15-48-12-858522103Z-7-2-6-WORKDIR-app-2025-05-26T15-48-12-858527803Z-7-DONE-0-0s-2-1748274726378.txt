@@ -1,0 +1,50 @@
+2025-05-26T15:48:12.858522103Z #7 [2/6] WORKDIR /app
+2025-05-26T15:48:12.858527803Z #7 DONE 0.0s
+2025-05-26T15:48:12.858533383Z 
+2025-05-26T15:48:12.858539233Z #8 [3/6] COPY package*.json ./
+2025-05-26T15:48:12.858545184Z #8 DONE 0.0s
+2025-05-26T15:48:13.008415517Z 
+2025-05-26T15:48:13.008451328Z #9 [4/6] RUN npm ci --only=production
+2025-05-26T15:48:13.309967584Z #9 0.343 npm warn config only Use `--omit=dev` to omit dev dependencies from the install.
+2025-05-26T15:48:26.691001822Z #9 13.76 
+2025-05-26T15:48:26.691043143Z #9 13.76 added 372 packages, and audited 373 packages in 13s
+2025-05-26T15:48:26.691049513Z #9 13.76 
+2025-05-26T15:48:26.691056483Z #9 13.76 52 packages are looking for funding
+2025-05-26T15:48:26.691062583Z #9 13.76   run `npm fund` for details
+2025-05-26T15:48:26.691067863Z #9 13.76 
+2025-05-26T15:48:26.691076923Z #9 13.76 found 0 vulnerabilities
+2025-05-26T15:48:26.691095293Z #9 13.76 npm notice
+2025-05-26T15:48:26.691099774Z #9 13.76 npm notice New major version of npm available! 10.8.2 -> 11.4.1
+2025-05-26T15:48:26.691103644Z #9 13.76 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.1
+2025-05-26T15:48:26.691106954Z #9 13.76 npm notice To update run: npm install -g npm@11.4.1
+2025-05-26T15:48:26.691110194Z #9 13.76 npm notice
+2025-05-26T15:48:27.593440952Z #9 DONE 14.7s
+2025-05-26T15:48:27.593468462Z 
+2025-05-26T15:48:27.593475282Z #10 [5/6] COPY . .
+2025-05-26T15:48:28.345147743Z #10 DONE 0.7s
+2025-05-26T15:48:28.345186024Z 
+2025-05-26T15:48:28.345192514Z #11 [6/6] RUN npm run build
+2025-05-26T15:48:28.636617139Z #11 0.353 
+2025-05-26T15:48:28.63664661Z #11 0.353 > rest-express@1.0.0 build
+2025-05-26T15:48:28.63665301Z #11 0.353 > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2025-05-26T15:48:28.63665837Z #11 0.353 
+2025-05-26T15:48:28.63666367Z #11 0.360 sh: vite: not found
+2025-05-26T15:48:28.63666913Z #11 ERROR: process "/bin/sh -c npm run build" did not complete successfully: exit code: 127
+2025-05-26T15:48:28.64656292Z ------
+2025-05-26T15:48:28.6465876Z  > [6/6] RUN npm run build:
+2025-05-26T15:48:28.64659282Z 0.353 
+2025-05-26T15:48:28.64659807Z 0.353 > rest-express@1.0.0 build
+2025-05-26T15:48:28.6466043Z 0.353 > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+2025-05-26T15:48:28.646609781Z 0.353 
+2025-05-26T15:48:28.646614661Z 0.360 sh: vite: not found
+2025-05-26T15:48:28.646619911Z ------
+2025-05-26T15:48:28.648959858Z Dockerfile:15
+2025-05-26T15:48:28.648976549Z --------------------
+2025-05-26T15:48:28.648981889Z   13 |     
+2025-05-26T15:48:28.648987469Z   14 |     # Build the application
+2025-05-26T15:48:28.648992949Z   15 | >>> RUN npm run build
+2025-05-26T15:48:28.648997719Z   16 |     
+2025-05-26T15:48:28.649002559Z   17 |     # Expose port
+2025-05-26T15:48:28.649007859Z --------------------
+2025-05-26T15:48:28.649016289Z error: failed to solve: process "/bin/sh -c npm run build" did not complete successfully: exit code: 127
+2025-05-26T15:48:28.677941215Z error: exit status 1
