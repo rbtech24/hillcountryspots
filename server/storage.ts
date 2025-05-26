@@ -96,7 +96,7 @@ export class MemStorage implements IStorage {
       category: "Family Travel",
       author: "Lisa Martinez",
       authorInitials: "LM",
-      publishDate: "December 28, 2024",
+      publishDate: "January 28, 2025",
       readTime: "18 min read",
     };
 
@@ -108,7 +108,7 @@ export class MemStorage implements IStorage {
       category: "Culture & History",
       author: "Thomas Weber",
       authorInitials: "TW",
-      publishDate: "December 15, 2024",
+      publishDate: "February 15, 2025",
       readTime: "16 min read",
     };
 
@@ -120,7 +120,7 @@ export class MemStorage implements IStorage {
       category: "Outdoor Adventure",
       author: "Alex Davis",
       authorInitials: "AD",
-      publishDate: "December 1, 2024",
+      publishDate: "March 1, 2025",
       readTime: "20 min read",
     };
 
