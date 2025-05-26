@@ -67,7 +67,6 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <Hero />
-
       {/* Featured Destinations */}
       <section id="destinations" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -97,7 +96,6 @@ export default function Home() {
 
         </div>
       </section>
-
       {/* Things to Do */}
       <section id="activities" className="py-20 bg-gradient-to-b from-bluebonnet-50 to-white">
         <div className="container mx-auto px-4">
@@ -139,7 +137,6 @@ export default function Home() {
           )}
         </div>
       </section>
-
       {/* Events Section */}
       <section id="events" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -186,7 +183,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Cabin Rentals Section */}
       <section id="cabins" className="py-20 bg-gradient-to-b from-bluebonnet-50 to-white">
         <div className="container mx-auto px-4">
@@ -279,7 +275,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Blog Section */}
       <section id="blog" className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
@@ -315,7 +310,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-bluebonnet-600">
         <div className="container mx-auto px-4 text-center text-white">
@@ -342,7 +336,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4">
@@ -403,7 +396,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-4 w-4 text-bluebonnet-400 mr-3" />
-                  <span className="text-gray-400">(512) 555-0123</span>
+                  <span className="text-gray-400"> (512) 847-7460</span>
                 </div>
                 <div className="flex items-start">
                   <MapPin className="h-4 w-4 text-bluebonnet-400 mr-3 mt-1" />
