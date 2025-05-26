@@ -25,15 +25,7 @@ export default function Hero() {
         <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
           Explore rolling hills, charming towns, world-class wineries, and endless adventures in America's most beautiful landscape.
         </p>
-        <div className="flex justify-center">
-          <Button 
-            size="lg"
-            className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600 transform hover:scale-105 transition-all shadow-lg px-8 py-4 text-lg font-semibold"
-          >
-            <Compass className="mr-2 h-5 w-5" />
-            Explore Destinations
-          </Button>
-        </div>
+
       </div>
 
       {/* Scroll indicator */}
