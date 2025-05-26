@@ -121,22 +121,141 @@ export class MemStorage implements IStorage {
       await this.createActivity(activity);
     }
     
-    // Add sample events
+    // Add comprehensive Hill Country events for 2025
     const sampleEvents: InsertEvent[] = [
+      // June 2025
       {
-        name: "Bluebonnet Festival",
-        description: "Join thousands celebrating Texas' state flower with live music, local vendors, and wildflower tours.",
-        date: "March 22-24, 2025",
-        location: "Chappell Hill",
-        price: "$15",
+        name: "Kerrville Folk Festival",
+        description: "America's longest-running music festival celebrating folk, country, and Americana music with camping and workshops.",
+        date: "May 22 - June 8, 2025",
+        location: "Kerrville",
+        price: "$45-85",
         featured: true,
       },
       {
-        name: "Fredericksburg Wine Road 290",
-        description: "Premium wine tasting event featuring Hill Country's finest vineyards and award-winning wines.",
-        date: "April 12-13, 2025",
+        name: "Blanco Lavender Festival",
+        description: "Celebrates the lavender harvest with vendors, food, music, and lavender farm tours.",
+        date: "June 6-8, 2025",
+        location: "Blanco",
+        price: "$12",
+        featured: false,
+      },
+      {
+        name: "Stonewall Peach JAMboree & Rodeo",
+        description: "Celebrates the peach harvest with rodeo, music, and peach dishes in the heart of peach country.",
+        date: "June 19-21, 2025",
+        location: "Stonewall",
+        price: "$15-25",
+        featured: true,
+      },
+      {
+        name: "Watermelon Thump",
+        description: "Iconic festival celebrating watermelons with contests, music, and food.",
+        date: "June 26-29, 2025",
+        location: "Luling",
+        price: "$10",
+        featured: false,
+      },
+      
+      // July 2025
+      {
+        name: "Austin Symphony July 4th Concert & Fireworks",
+        description: "Patriotic concert and large fireworks display over Lady Bird Lake with the Austin Symphony.",
+        date: "July 4, 2025",
+        location: "Austin",
+        price: "Free",
+        featured: true,
+      },
+      {
+        name: "Kerrville's 4th on the River Festival",
+        description: "Free concert and fireworks celebration along the Guadalupe River.",
+        date: "July 4, 2025",
+        location: "Kerrville",
+        price: "Free",
+        featured: false,
+      },
+      {
+        name: "Gillespie County Fair & Race Meet",
+        description: "Traditional county fair with horse racing, rodeo, live music, and carnival attractions.",
+        date: "August 15-25, 2025",
         location: "Fredericksburg",
-        price: "$45",
+        price: "$8-15",
+        featured: true,
+      },
+      
+      // Fall Events
+      {
+        name: "Austin City Limits Music Festival",
+        description: "One of the nation's premier music festivals featuring top artists across multiple genres at Zilker Park.",
+        date: "October 3-5 & October 10-12, 2025",
+        location: "Austin",
+        price: "$275-450",
+        featured: true,
+      },
+      {
+        name: "Fredericksburg Oktoberfest",
+        description: "Celebrate German heritage with traditional music, authentic cuisine, craft beer, and family activities.",
+        date: "October 4-5, 2025",
+        location: "Fredericksburg",
+        price: "$12",
+        featured: true,
+      },
+      {
+        name: "Formula 1 United States Grand Prix",
+        description: "High-speed racing and major concerts at Circuit of The Americas with world-class entertainment.",
+        date: "October 17-19, 2025",
+        location: "Austin",
+        price: "$89-750",
+        featured: true,
+      },
+      {
+        name: "Wurstfest",
+        description: "A Ten Day Salute To Sausage - massive German festival with food, beer, music, and carnival.",
+        date: "October 31 - November 9, 2025",
+        location: "New Braunfels",
+        price: "$12-15",
+        featured: true,
+      },
+      
+      // November-December 2025
+      {
+        name: "Texas Monthly BBQ Fest",
+        description: "Celebrates the state's best BBQ with live music and demonstrations in the BBQ Capital of Texas.",
+        date: "November 1-2, 2025",
+        location: "Lockhart",
+        price: "$35-65",
+        featured: false,
+      },
+      {
+        name: "Lights Spectacular",
+        description: "Twinkle Town transforms Johnson City into a dazzling holiday light display.",
+        date: "November 15, 2025 - January 1, 2026",
+        location: "Johnson City",
+        price: "Free",
+        featured: true,
+      },
+      {
+        name: "Christmas Wine Affair Passport",
+        description: "Special passport for holiday tastings at Texas Hill Country wineries.",
+        date: "November 29 - December 15, 2025",
+        location: "Hill Country Wineries",
+        price: "$35-55",
+        featured: false,
+      },
+      {
+        name: "Festival of Texas Fiddling",
+        description: "Celebrates Texas fiddling tradition at the historic Twin Sisters Dance Hall.",
+        date: "December 5-7, 2025",
+        location: "Blanco",
+        price: "$15-25",
+        featured: false,
+      },
+      {
+        name: "Fredericksburg Christmas Nights of Lights",
+        description: "German-Texas holiday celebrations with light show and festive events throughout the town.",
+        date: "November 29, 2025 - January 4, 2026",
+        location: "Fredericksburg",
+        price: "Free-$8",
         featured: true,
       },
     ];
