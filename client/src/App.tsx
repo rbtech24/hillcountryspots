@@ -8,6 +8,7 @@ import Destinations from "@/pages/Destinations";
 import Activities from "@/pages/Activities";
 import Events from "@/pages/Events";
 import Blog from "@/pages/Blog";
+import BlogPost from "@/pages/BlogPost";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,6 +19,7 @@ function Router() {
       <Route path="/activities" component={Activities} />
       <Route path="/events" component={Events} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/:id" component={BlogPost} />
       <Route component={NotFound} />
     </Switch>
   );
