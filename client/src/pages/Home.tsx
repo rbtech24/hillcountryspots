@@ -176,28 +176,9 @@ export default function Home() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts?.slice(0, 5).map((post) => (
+              {blogPosts?.map((post) => (
                 <BlogCard key={post.id} blogPost={post} />
               ))}
-
-              {/* Newsletter Signup Card */}
-              <Card className="bluebonnet-gradient rounded-2xl p-8 text-white flex flex-col justify-center">
-                <div className="text-center">
-                  <RectangleEllipsis className="h-16 w-16 mb-4 opacity-80 mx-auto" />
-                  <h3 className="font-playfair text-2xl font-bold mb-3">Stay Updated</h3>
-                  <p className="mb-6 opacity-90">Get the latest Hill Country travel tips and insider guides delivered to your inbox.</p>
-                  <div className="space-y-3">
-                    <Input 
-                      type="email" 
-                      placeholder="Enter your email" 
-                      className="bg-white text-gray-800"
-                    />
-                    <Button className="w-full bg-white text-bluebonnet-500 hover:bg-gray-100 font-semibold">
-                      Subscribe Now
-                    </Button>
-                  </div>
-                </div>
-              </Card>
             </div>
           )}
 
