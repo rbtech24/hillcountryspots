@@ -134,11 +134,13 @@ export default function BlogPostPage() {
 
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
-              {blogPost.content.split('\n\n').map((paragraph, index) => (
+              {blogPost.content ? blogPost.content.split('\n\n').map((paragraph, index) => (
                 <p key={index} className="mb-6 text-gray-700 leading-relaxed">
                   {paragraph}
                 </p>
-              ))}
+              )) : (
+                <p className="text-gray-600">Content not available.</p>
+              )}
             </div>
 
             {/* Article Footer */}
