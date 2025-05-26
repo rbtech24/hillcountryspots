@@ -1,0 +1,50 @@
+2025-05-26T18:42:57.008958495Z #11 1.250 vite v5.4.14 building for production...
+2025-05-26T18:42:57.159675645Z #11 1.389 transforming...
+2025-05-26T18:42:57.761388342Z #11 1.966 Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+2025-05-26T18:42:57.761416453Z #11 1.966   npx update-browserslist-db@latest
+2025-05-26T18:42:57.761422203Z #11 1.966   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2025-05-26T18:42:59.866467789Z #11 4.145 [vite:css] @import must precede all other statements (besides @charset or empty @layer)
+2025-05-26T18:42:59.86650438Z #11 4.145 3  |  @tailwind utilities;
+2025-05-26T18:42:59.86651022Z #11 4.145 4  |  
+2025-05-26T18:42:59.86651728Z #11 4.145 5  |  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600&display=swap');
+2025-05-26T18:42:59.86652272Z #11 4.145    |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-05-26T18:42:59.866528161Z #11 4.145 6  |  
+2025-05-26T18:42:59.866533911Z #11 4.145 7  |  :root {
+2025-05-26T18:43:04.828377863Z #11 9.061 ✓ 1681 modules transformed.
+2025-05-26T18:43:05.116304244Z #11 9.460 rendering chunks...
+2025-05-26T18:43:05.267004408Z #11 9.517 computing gzip size...
+2025-05-26T18:43:05.267040419Z #11 9.540 ../dist/public/index.html                                   3.41 kB │ gzip:  1.08 kB
+2025-05-26T18:43:05.267047139Z #11 9.540 ../dist/public/assets/austin-ChGj3tI-.png               3,472.77 kB
+2025-05-26T18:43:05.267053539Z #11 9.540 ../dist/public/assets/Wimberly Texas-EIR_zIrD.png       3,488.19 kB
+2025-05-26T18:43:05.26705905Z #11 9.540 ../dist/public/assets/fredericksburg (2)-DFzPXIZS.png   3,491.62 kB
+2025-05-26T18:43:05.26706431Z #11 9.540 ../dist/public/assets/hill country-BXPYb3jX.jpg        29,157.18 kB
+2025-05-26T18:43:05.26706942Z #11 9.541 ../dist/public/assets/index-Dj5MstKI.css                   88.25 kB │ gzip: 14.15 kB
+2025-05-26T18:43:05.26707499Z #11 9.541 ../dist/public/assets/index-ZRMvc6w8.js                   313.70 kB │ gzip: 96.53 kB
+2025-05-26T18:43:05.2670799Z #11 9.541 ✓ built in 8.24s
+2025-05-26T18:43:06.157368887Z #11 10.42 ✘ [ERROR] Cannot use both "outfile" and "outdir"
+2025-05-26T18:43:06.157396928Z #11 10.42 
+2025-05-26T18:43:06.157403178Z #11 10.42 1 error
+2025-05-26T18:43:06.157408968Z #11 ERROR: process "/bin/sh -c npx vite build && npx esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js" did not complete successfully: exit code: 1
+2025-05-26T18:43:06.168545461Z ------
+2025-05-26T18:43:06.168585692Z  > [6/8] RUN npx vite build && npx esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js:
+2025-05-26T18:43:06.168593062Z 9.540 ../dist/public/assets/austin-ChGj3tI-.png               3,472.77 kB
+2025-05-26T18:43:06.168598663Z 9.540 ../dist/public/assets/Wimberly Texas-EIR_zIrD.png       3,488.19 kB
+2025-05-26T18:43:06.168604263Z 9.540 ../dist/public/assets/fredericksburg (2)-DFzPXIZS.png   3,491.62 kB
+2025-05-26T18:43:06.168609713Z 9.540 ../dist/public/assets/hill country-BXPYb3jX.jpg        29,157.18 kB
+2025-05-26T18:43:06.168615823Z 9.541 ../dist/public/assets/index-Dj5MstKI.css                   88.25 kB │ gzip: 14.15 kB
+2025-05-26T18:43:06.168620783Z 9.541 ../dist/public/assets/index-ZRMvc6w8.js                   313.70 kB │ gzip: 96.53 kB
+2025-05-26T18:43:06.168626763Z 9.541 ✓ built in 8.24s
+2025-05-26T18:43:06.168632374Z 10.42 ✘ [ERROR] Cannot use both "outfile" and "outdir"
+2025-05-26T18:43:06.168637244Z 10.42 
+2025-05-26T18:43:06.168642414Z 10.42 1 error
+2025-05-26T18:43:06.168647454Z ------
+2025-05-26T18:43:06.171064548Z Dockerfile:15
+2025-05-26T18:43:06.171091009Z --------------------
+2025-05-26T18:43:06.17109806Z   13 |     
+2025-05-26T18:43:06.17110519Z   14 |     # Build the application
+2025-05-26T18:43:06.17111222Z   15 | >>> RUN npx vite build && npx esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js
+2025-05-26T18:43:06.17111845Z   16 |     
+2025-05-26T18:43:06.17112534Z   17 |     # Copy attached assets to dist folder
+2025-05-26T18:43:06.171131411Z --------------------
+2025-05-26T18:43:06.171140331Z error: failed to solve: process "/bin/sh -c npx vite build && npx esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js" did not complete successfully: exit code: 1
+2025-05-26T18:43:06.200960148Z error: exit status 1
