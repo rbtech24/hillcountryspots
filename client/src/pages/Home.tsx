@@ -227,21 +227,13 @@ export default function Home() {
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
             Start planning your perfect Texas Hill Country adventure today. From wildflower trails to wine tastings, your unforgettable journey awaits.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               size="lg"
               className="bg-white text-bluebonnet-500 hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg px-8 py-4 text-lg font-semibold"
             >
               <Compass className="mr-2 h-5 w-5" />
               Plan Your Trip
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-bluebonnet-500 px-8 py-4 text-lg font-semibold"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Contact Us
             </Button>
           </div>
         </div>
