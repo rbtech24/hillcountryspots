@@ -84,7 +84,7 @@ export class MemStorage implements IStorage {
       {
         name: "Wimberley",
         description: "Artisan village with unique shops, galleries, and the famous Wimberley Market Days.",
-        imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "/src/attached_assets/Wimberly Texas.png",
         rating: 46,
         tags: ["Arts", "Shopping"],
         featured: true,
