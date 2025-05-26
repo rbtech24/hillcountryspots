@@ -70,11 +70,7 @@ export default function Home() {
             </div>
           )}
 
-          <div className="text-center mt-12">
-            <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600 px-8 py-3 text-lg font-semibold">
-              View All Destinations
-            </Button>
-          </div>
+
         </div>
       </section>
 
