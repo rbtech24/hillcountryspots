@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import DestinationCard from "@/components/DestinationCard";
@@ -13,6 +14,8 @@ import Logo from "@/components/Logo";
 import type { Destination, Activity, Event, BlogPost } from "@shared/schema";
 
 export default function Home() {
+  const [selectedCategory, setSelectedCategory] = useState("All Activities");
+  
   const { data: destinations, isLoading: destinationsLoading } = useQuery<Destination[]>({
     queryKey: ["/api/destinations/featured"],
   });
@@ -30,6 +33,11 @@ export default function Home() {
   });
 
   const activityCategories = ["All Activities", "Outdoor", "Wine & Dining", "Culture", "Water Activities"];
+  
+  // Filter activities based on selected category
+  const filteredActivities = activities?.filter(activity => 
+    selectedCategory === "All Activities" || activity.category === selectedCategory
+  ) || [];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -84,11 +92,12 @@ export default function Home() {
 
           {/* Activity Categories */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {activityCategories.map((category, index) => (
+            {activityCategories.map((category) => (
               <Button
                 key={category}
-                variant={index === 0 ? "default" : "outline"}
-                className={index === 0 ? "bg-bluebonnet-500 text-white hover:bg-bluebonnet-600" : ""}
+                variant={selectedCategory === category ? "default" : "outline"}
+                className={selectedCategory === category ? "bg-bluebonnet-500 text-white hover:bg-bluebonnet-600" : ""}
+                onClick={() => setSelectedCategory(category)}
               >
                 {category}
               </Button>
@@ -103,7 +112,7 @@ export default function Home() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {activities?.slice(0, 6).map((activity) => (
+              {filteredActivities.slice(0, 6).map((activity) => (
                 <ActivityCard key={activity.id} activity={activity} />
               ))}
             </div>
