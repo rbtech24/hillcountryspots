@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-bluebonnet-600 to-purple-600">
+      <section className="py-20 bg-bluebonnet-600">
         <div className="container mx-auto px-4 text-center text-white">
           <h2 className="font-playfair text-4xl md:text-6xl font-bold mb-6">
             Ready to Explore Hill Country?
