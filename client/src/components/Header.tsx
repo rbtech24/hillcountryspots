@@ -51,9 +51,15 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600">
-              Plan Trip
-            </Button>
+            <a 
+              href="https://wimberleycabins.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600">
+                Book A Cabin
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,9 +91,16 @@ export default function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600 w-full">
-                Plan Trip
-              </Button>
+              <a 
+                href="https://wimberleycabins.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-full"
+              >
+                <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600 w-full">
+                  Book A Cabin
+                </Button>
+              </a>
             </div>
           </div>
         )}

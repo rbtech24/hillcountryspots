@@ -164,6 +164,99 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Cabin Rentals Section */}
+      <section id="cabins" className="py-20 bg-gradient-to-b from-bluebonnet-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+              Luxury Cabin Rentals
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Stay in expertly decorated cabins in the heart of Texas Hill Country
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Cabin Image */}
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1587061949409-02df41d5e562?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                  alt="Luxury cabin in Texas Hill Country"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-bluebonnet-600">★★★★★</div>
+                  <div className="text-sm text-gray-600">Exceptional Reviews</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Cabin Details */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-playfair text-3xl font-bold text-gray-800 mb-4">
+                  The Cabins at Flite Acres
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Cabins have been expertly decorated and are the perfect destination for your getaway in the heart of the Texas Hill Country. With exceptional attention to detail, from the luxurious linens, to the beautifully curated country chic décor, the Cabins at Flite Acres are the ideal place to settle into a relaxing vacation.
+                </p>
+              </div>
+
+              <div>
+                <p className="text-gray-600 leading-relaxed">
+                  Each cabin offers modern amenities while maintaining the rustic charm that makes Hill Country so special. From your private deck, you'll enjoy stunning views of the Texas countryside, complete privacy, and the peaceful sounds of nature.
+                </p>
+              </div>
+
+              {/* Amenities */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-bluebonnet-100 rounded-full flex items-center justify-center">
+                    <span className="text-bluebonnet-600 text-sm">📶</span>
+                  </div>
+                  <span className="text-gray-700">High-Speed WiFi</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-bluebonnet-100 rounded-full flex items-center justify-center">
+                    <span className="text-bluebonnet-600 text-sm">🚗</span>
+                  </div>
+                  <span className="text-gray-700">Free Parking</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-bluebonnet-100 rounded-full flex items-center justify-center">
+                    <span className="text-bluebonnet-600 text-sm">☕</span>
+                  </div>
+                  <span className="text-gray-700">Coffee Station</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-bluebonnet-100 rounded-full flex items-center justify-center">
+                    <span className="text-bluebonnet-600 text-sm">🌲</span>
+                  </div>
+                  <span className="text-gray-700">Nature Access</span>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="pt-6">
+                <a 
+                  href="https://wimberleycabins.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600 px-8 py-4 text-lg font-semibold transform hover:scale-105 transition-all">
+                    Book Your Cabin Getaway
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Blog Section */}
       <section id="blog" className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
@@ -210,13 +303,19 @@ export default function Home() {
             Start planning your perfect Texas Hill Country adventure today. From wildflower trails to wine tastings, your unforgettable journey awaits.
           </p>
           <div className="flex justify-center">
-            <Button 
-              size="lg"
-              className="bg-white text-bluebonnet-500 hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg px-8 py-4 text-lg font-semibold"
+            <a 
+              href="https://wimberleycabins.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
             >
-              <Compass className="mr-2 h-5 w-5" />
-              Plan Your Trip
-            </Button>
+              <Button 
+                size="lg"
+                className="bg-white text-bluebonnet-500 hover:bg-gray-100 transform hover:scale-105 transition-all shadow-lg px-8 py-4 text-lg font-semibold"
+              >
+                <Compass className="mr-2 h-5 w-5" />
+                Book A Cabin
+              </Button>
+            </a>
           </div>
         </div>
       </section>
