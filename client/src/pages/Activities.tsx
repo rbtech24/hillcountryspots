@@ -26,12 +26,13 @@ export default function Activities() {
       <Header />
       
       {/* Page Header */}
-      <section className="py-20 bg-gradient-to-r from-bluebonnet-500 to-purple-500 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-6">
+      <section className="py-20 bg-gradient-to-r from-bluebonnet-500 to-purple-500 relative">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
             Things to Do
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white drop-shadow-md">
             From outdoor adventures to cultural experiences, discover endless ways to explore Hill Country
           </p>
         </div>

@@ -17,12 +17,13 @@ export default function Blog() {
       <Header />
       
       {/* Page Header */}
-      <section className="py-20 bg-gradient-to-r from-bluebonnet-500 to-purple-500 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-6">
+      <section className="py-20 bg-gradient-to-r from-bluebonnet-500 to-purple-500 relative">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
             Travel Stories & Tips
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white drop-shadow-md">
             Get inspired with insider tips, travel stories, and expert guides from Hill Country explorers
           </p>
         </div>
