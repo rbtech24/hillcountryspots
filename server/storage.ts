@@ -76,7 +76,7 @@ export class MemStorage implements IStorage {
       {
         name: "Austin",
         description: "Keep Austin Weird - vibrant music scene, food trucks, and outdoor adventures in the Hill Country gateway.",
-        imageUrl: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "/src/attached_assets/austin.png",
         rating: 49,
         tags: ["Music", "Food", "Nightlife"],
         featured: true,
