@@ -76,7 +76,7 @@ export class MemStorage implements IStorage {
       {
         name: "Austin",
         description: "Keep Austin Weird - vibrant music scene, food trucks, and outdoor adventures in the Hill Country gateway.",
-        imageUrl: "/src/attached_assets/austin.png",
+        imageUrl: "/attached_assets/austin.png",
         rating: 49,
         tags: ["Music", "Food", "Nightlife"],
         featured: true,
@@ -84,7 +84,7 @@ export class MemStorage implements IStorage {
       {
         name: "Wimberley",
         description: "Artisan village with unique shops, galleries, and the famous Wimberley Market Days.",
-        imageUrl: "/src/attached_assets/Wimberly Texas.png",
+        imageUrl: "/attached_assets/Wimberly Texas.png",
         rating: 46,
         tags: ["Arts", "Shopping"],
         featured: true,
