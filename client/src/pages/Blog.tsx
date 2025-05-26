@@ -17,9 +17,8 @@ export default function Blog() {
       <Header />
       
       {/* Page Header */}
-      <section className="py-20 bg-gradient-to-r from-bluebonnet-500 to-purple-500 relative">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
+      <section className="py-20 bg-bluebonnet-600">
+        <div className="container mx-auto px-4 text-center">
           <h1 className="font-playfair text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
             Travel Stories & Tips
           </h1>
