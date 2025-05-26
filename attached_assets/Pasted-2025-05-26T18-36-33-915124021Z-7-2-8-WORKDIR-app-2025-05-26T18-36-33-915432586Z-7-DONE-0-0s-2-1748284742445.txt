@@ -1,0 +1,51 @@
+2025-05-26T18:36:33.915124021Z #7 [2/8] WORKDIR /app
+2025-05-26T18:36:33.915432586Z #7 DONE 0.0s
+2025-05-26T18:36:33.91570528Z 
+2025-05-26T18:36:33.916107147Z #8 [3/8] COPY package*.json ./
+2025-05-26T18:36:33.916704737Z #8 DONE 0.1s
+2025-05-26T18:36:33.917690273Z 
+2025-05-26T18:36:33.918262652Z #9 [4/8] RUN npm ci
+2025-05-26T18:36:54.577309184Z #9 20.73 npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+2025-05-26T18:36:54.728288936Z #9 20.78 npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+2025-05-26T18:37:21.553774262Z #9 47.69 
+2025-05-26T18:37:21.554016616Z #9 47.69 added 481 packages, and audited 482 packages in 47s
+2025-05-26T18:37:21.554028486Z #9 47.69 
+2025-05-26T18:37:21.554036466Z #9 47.69 64 packages are looking for funding
+2025-05-26T18:37:21.554043166Z #9 47.69   run `npm fund` for details
+2025-05-26T18:37:21.696304849Z #9 47.85 
+2025-05-26T18:37:21.69638341Z #9 47.85 7 moderate severity vulnerabilities
+2025-05-26T18:37:21.69639105Z #9 47.85 
+2025-05-26T18:37:21.69639891Z #9 47.85 To address issues that do not require attention, run:
+2025-05-26T18:37:21.696405841Z #9 47.85   npm audit fix
+2025-05-26T18:37:21.696411951Z #9 47.85 
+2025-05-26T18:37:21.696419081Z #9 47.85 To address all issues (including breaking changes), run:
+2025-05-26T18:37:21.696439861Z #9 47.85   npm audit fix --force
+2025-05-26T18:37:21.696446911Z #9 47.85 
+2025-05-26T18:37:21.696453841Z #9 47.85 Run `npm audit` for details.
+2025-05-26T18:37:21.849366197Z #9 47.85 npm notice
+2025-05-26T18:37:21.849739393Z #9 47.85 npm notice New major version of npm available! 10.8.2 -> 11.4.1
+2025-05-26T18:37:21.849965277Z #9 47.85 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.4.1
+2025-05-26T18:37:21.850225721Z #9 47.85 npm notice To update run: npm install -g npm@11.4.1
+2025-05-26T18:37:21.850385564Z #9 47.85 npm notice
+2025-05-26T18:37:22.765755234Z #9 DONE 48.8s
+2025-05-26T18:37:22.765787745Z 
+2025-05-26T18:37:22.765795895Z #10 [5/8] COPY . .
+2025-05-26T18:37:24.121646518Z #10 DONE 1.3s
+2025-05-26T18:37:24.121754269Z 
+2025-05-26T18:37:24.12179301Z #11 [6/8] RUN vite build && esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js
+2025-05-26T18:37:24.383270541Z #11 0.287 /bin/sh: vite: not found
+2025-05-26T18:37:24.383517505Z #11 ERROR: process "/bin/sh -c vite build && esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js" did not complete successfully: exit code: 127
+2025-05-26T18:37:24.419665273Z ------
+2025-05-26T18:37:24.419731734Z  > [6/8] RUN vite build && esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js:
+2025-05-26T18:37:24.419751544Z 0.287 /bin/sh: vite: not found
+2025-05-26T18:37:24.419970138Z ------
+2025-05-26T18:37:24.431478955Z Dockerfile:15
+2025-05-26T18:37:24.432066204Z --------------------
+2025-05-26T18:37:24.432366699Z   13 |     
+2025-05-26T18:37:24.432520922Z   14 |     # Build the application
+2025-05-26T18:37:24.432762916Z   15 | >>> RUN vite build && esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js
+2025-05-26T18:37:24.432919178Z   16 |     
+2025-05-26T18:37:24.432933638Z   17 |     # Copy attached assets to dist folder
+2025-05-26T18:37:24.432941839Z --------------------
+2025-05-26T18:37:24.432949069Z error: failed to solve: process "/bin/sh -c vite build && esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js" did not complete successfully: exit code: 127
+2025-05-26T18:37:24.545113262Z error: exit status 1

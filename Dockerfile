@@ -12,7 +12,7 @@ RUN npm ci
 COPY . .
 
 # Build the application
-RUN vite build && esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js
+RUN npx vite build && npx esbuild server/production.ts --platform=node --packages=external --bundle --format=esm --outdir=dist --outfile=dist/server.js
 
 # Copy attached assets to dist folder
 RUN cp -r attached_assets dist/
