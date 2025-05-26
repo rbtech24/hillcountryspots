@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
@@ -12,10 +12,33 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Compass, Play, RectangleEllipsis, Facebook, Instagram, Twitter, Youtube, Mountain, Mail, Phone, MapPin } from "lucide-react";
 import Logo from "@/components/Logo";
+import { updatePageSEO } from "@/lib/seo";
 import type { Destination, Activity, Event, BlogPost } from "@shared/schema";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("All Activities");
+
+  useEffect(() => {
+    updatePageSEO({
+      title: "Hill Country Spots - Your Complete Guide to Texas Hill Country",
+      description: "Discover the best destinations, activities, events, and luxury cabin rentals in Texas Hill Country. Plan your perfect getaway with insider tips for Fredericksburg, Austin, and Wimberley.",
+      keywords: "Texas Hill Country, Fredericksburg, Austin, Wimberley, bluebonnets, wine tours, cabin rentals, Hill Country events, Texas travel guide",
+      ogImage: "https://hillcountryspots.com/attached_assets/Hill Country Texas.jpg",
+      canonicalUrl: "https://hillcountryspots.com/",
+      structuredData: {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Hill Country Spots",
+        "url": "https://hillcountryspots.com",
+        "description": "Your complete guide to Texas Hill Country destinations, activities, events, and cabin rentals",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://hillcountryspots.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    });
+  }, []);
   
   const { data: destinations, isLoading: destinationsLoading } = useQuery<Destination[]>({
     queryKey: ["/api/destinations/featured"],

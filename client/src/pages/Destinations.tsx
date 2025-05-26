@@ -1,9 +1,21 @@
 import { useQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import DestinationCard from "@/components/DestinationCard";
+import { updatePageSEO } from "@/lib/seo";
 import type { Destination } from "@shared/schema";
 
 export default function Destinations() {
+  useEffect(() => {
+    updatePageSEO({
+      title: "Texas Hill Country Destinations - Fredericksburg, Austin & Wimberley | Hill Country Spots",
+      description: "Explore the top destinations in Texas Hill Country including historic Fredericksburg, vibrant Austin, charming Wimberley, and scenic Dripping Springs. Find the perfect Hill Country town for your getaway.",
+      keywords: "Hill Country destinations, Fredericksburg Texas, Austin Texas, Wimberley Texas, Dripping Springs, Hill Country towns, Texas travel destinations",
+      ogImage: "https://hillcountryspots.com/attached_assets/shutterstock_2325059655.jpg",
+      canonicalUrl: "https://hillcountryspots.com/destinations"
+    });
+  }, []);
+
   const { data: destinations, isLoading } = useQuery<Destination[]>({
     queryKey: ["/api/destinations"],
   });
