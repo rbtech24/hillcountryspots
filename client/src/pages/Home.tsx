@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
+import { Link } from "wouter";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import DestinationCard from "@/components/DestinationCard";
@@ -154,9 +155,11 @@ export default function Home() {
           )}
 
           <div className="text-center">
-            <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600 px-8 py-3 text-lg font-semibold">
-              View All Events
-            </Button>
+            <Link href="/events">
+              <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600 px-8 py-3 text-lg font-semibold">
+                View All Events
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -188,9 +191,11 @@ export default function Home() {
           )}
 
           <div className="text-center mt-12">
-            <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600 px-8 py-3 text-lg font-semibold">
-              View All Blog Posts
-            </Button>
+            <Link href="/blog">
+              <Button className="bg-bluebonnet-500 text-white hover:bg-bluebonnet-600 px-8 py-3 text-lg font-semibold">
+                View All Blog Posts
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
