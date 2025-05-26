@@ -68,7 +68,7 @@ export class MemStorage implements IStorage {
       {
         name: "Fredericksburg",
         description: "Historic German town famous for wineries, peach orchards, and authentic German cuisine.",
-        imageUrl: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "/attached_assets/fredericksburg (2).png",
         rating: 48,
         tags: ["Historic", "Wine", "German Culture"],
         featured: true,

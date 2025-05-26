@@ -3,16 +3,20 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Destination } from "@shared/schema";
+import { destinationImages } from "@/lib/images";
 
 interface DestinationCardProps {
   destination: Destination;
 }
 
 export default function DestinationCard({ destination }: DestinationCardProps) {
+  // Use local imported images if available, otherwise fall back to imageUrl
+  const imageUrl = destinationImages[destination.name as keyof typeof destinationImages] || destination.imageUrl;
+  
   return (
     <Card className="group bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
       <img 
-        src={destination.imageUrl} 
+        src={imageUrl} 
         alt={destination.name}
         className="w-full h-64 object-cover"
       />
