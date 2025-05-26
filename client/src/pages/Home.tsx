@@ -210,17 +210,8 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-bluebonnet-900/80 to-purple-900/80"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
+      <section className="py-20 bg-gradient-to-r from-bluebonnet-600 to-purple-600">
+        <div className="container mx-auto px-4 text-center text-white">
           <h2 className="font-playfair text-4xl md:text-6xl font-bold mb-6">
             Ready to Explore Hill Country?
           </h2>
