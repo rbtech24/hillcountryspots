@@ -55,10 +55,10 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // In production, serve static files from dist directory
-  app.use(express.static("dist"));
+  // In production, serve static files from dist/public directory
+  app.use(express.static("dist/public"));
   app.get("*", (_req, res) => {
-    res.sendFile(path.resolve("dist/index.html"));
+    res.sendFile(path.resolve("dist/public/index.html"));
   });
 
   // Use Render's assigned port or fallback to 5000
