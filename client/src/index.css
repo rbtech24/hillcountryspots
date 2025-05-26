@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600&display=swap');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Bluebonnet inspired colors */
+  --bluebonnet-50: 240 100% 98%;
+  --bluebonnet-100: 219 100% 95%;
+  --bluebonnet-200: 219 100% 88%;
+  --bluebonnet-300: 219 100% 79%;
+  --bluebonnet-400: 219 100% 67%;
+  --bluebonnet-500: 207 90% 54%;
+  --bluebonnet-600: 219 100% 47%;
+  --bluebonnet-700: 219 100% 39%;
+  --bluebonnet-800: 219 100% 32%;
+  --bluebonnet-900: 220 100% 26%;
+  
+  --purple-500: 267 54% 54%;
+  --purple-600: 267 54% 46%;
+  --purple-700: 267 54% 38%;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-dancing {
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .bluebonnet-gradient {
+    background: linear-gradient(135deg, hsl(var(--bluebonnet-500)) 0%, hsl(var(--purple-500)) 100%);
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(107, 70, 193, 0.1) 100%);
+  }
+}
+
+@layer utilities {
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  
+  .text-bluebonnet-50 { color: hsl(var(--bluebonnet-50)); }
+  .text-bluebonnet-100 { color: hsl(var(--bluebonnet-100)); }
+  .text-bluebonnet-200 { color: hsl(var(--bluebonnet-200)); }
+  .text-bluebonnet-300 { color: hsl(var(--bluebonnet-300)); }
+  .text-bluebonnet-400 { color: hsl(var(--bluebonnet-400)); }
+  .text-bluebonnet-500 { color: hsl(var(--bluebonnet-500)); }
+  .text-bluebonnet-600 { color: hsl(var(--bluebonnet-600)); }
+  .text-bluebonnet-700 { color: hsl(var(--bluebonnet-700)); }
+  .text-bluebonnet-800 { color: hsl(var(--bluebonnet-800)); }
+  .text-bluebonnet-900 { color: hsl(var(--bluebonnet-900)); }
+  
+  .bg-bluebonnet-50 { background-color: hsl(var(--bluebonnet-50)); }
+  .bg-bluebonnet-100 { background-color: hsl(var(--bluebonnet-100)); }
+  .bg-bluebonnet-200 { background-color: hsl(var(--bluebonnet-200)); }
+  .bg-bluebonnet-300 { background-color: hsl(var(--bluebonnet-300)); }
+  .bg-bluebonnet-400 { background-color: hsl(var(--bluebonnet-400)); }
+  .bg-bluebonnet-500 { background-color: hsl(var(--bluebonnet-500)); }
+  .bg-bluebonnet-600 { background-color: hsl(var(--bluebonnet-600)); }
+  .bg-bluebonnet-700 { background-color: hsl(var(--bluebonnet-700)); }
+  .bg-bluebonnet-800 { background-color: hsl(var(--bluebonnet-800)); }
+  .bg-bluebonnet-900 { background-color: hsl(var(--bluebonnet-900)); }
+  
+  .hover\:bg-bluebonnet-600:hover { background-color: hsl(var(--bluebonnet-600)); }
+  .hover\:text-bluebonnet-500:hover { color: hsl(var(--bluebonnet-500)); }
+  .hover\:text-bluebonnet-700:hover { color: hsl(var(--bluebonnet-700)); }
+  
+  .border-bluebonnet-500 { border-color: hsl(var(--bluebonnet-500)); }
+  
+  .text-purple-500 { color: hsl(var(--purple-500)); }
+  .text-purple-600 { color: hsl(var(--purple-600)); }
+  .text-purple-700 { color: hsl(var(--purple-700)); }
+  
+  .bg-purple-100 { background-color: hsl(267 54% 95%); }
+  .bg-purple-500 { background-color: hsl(var(--purple-500)); }
+  .bg-purple-600 { background-color: hsl(var(--purple-600)); }
+  .bg-purple-700 { background-color: hsl(var(--purple-700)); }
+}
